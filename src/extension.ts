@@ -1,12 +1,6 @@
 import * as vscode from "vscode";
+import * as completion from './completion';
 
-export function activete(context: vscode.ExtensionContext) {
-    console.log("wqeqeqwe");
-    // const result = vscode.languages.getLanguages().then((value: string[]) => {
-    //     const showInfoNotificationAsModal = vscode.commands.registerCommand('notifications-sample.showInfoAsModal', () => {
-    //         vscode.window.showInformationMessage(value.toString(), { modal: true });
-    //     });
-    //     context.subscriptions.push(showInfoNotificationAsModal);
-    // });
-    
+export function activate(context: vscode.ExtensionContext) {
+    completion.activate(context);
 }

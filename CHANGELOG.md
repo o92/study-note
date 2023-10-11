@@ -1,9 +1,5 @@
 # Change Log
 
-All notable changes to the "notebook-extension" extension will be documented in this file.
+### Version 0.0.1: Oct 11 , 2023
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [Unreleased]
-
-- Initial release
+- Add the katex syntax completion of the markdown cell of the notebook.

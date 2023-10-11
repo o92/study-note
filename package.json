@@ -1,31 +1,42 @@
 {
-  "name": "notebook-extension",
-  "displayName": "notebook-extension",
-  "description": "",
+  "name": "study-note",
+  "displayName": "study note",
+  "publisher": "hyj",
+  "description": "For some extensions in vscode notebooks,it is mainly to turn a notebook into a study note, please refer to readme for details.",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.83.0"
   },
-  "categories": [
-    "Other"
+  "keywords": [
+    "notebook",
+    "notebooks",
+    "markdown",
+    "katex",
+    "Markdown"
   ],
-  "activationEvents": [],
-  "main": "./out/extension.js",
-  "contributes": {
-    "commands": [
-      {
-        "command": "notebook-extension.helloWorld",
-        "title": "Hello World"
-      }
-    ]
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/o92/vscode-notebook-extension"
   },
+  "bugs": {
+    "url": "https://github.com/o92/vscode-notebook-extension/issues"
+  },
+  "categories": [
+    "Notebooks",
+    "Programming Languages"
+  ],
+  "activationEvents": [
+    "onLanguage:markdown"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {},
   "scripts": {
-    "vscode:prepublish": "npm run compile",
+    "vscode:prepublish": "bun run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
-    "pretest": "npm run compile && npm run lint",
+    "pretest": "bun run compile && bun run lint",
     "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js"
+    "test": "bun ./out/test/runTest.js"
   },
   "devDependencies": {
     "@types/vscode": "^1.83.0",
@@ -38,5 +49,8 @@
     "mocha": "^10.2.0",
     "typescript": "^5.2.2",
     "@vscode/test-electron": "^2.3.4"
+  },
+  "dependencies": {
+    "@vscode/vsce": "^2.21.1"
   }
 }
