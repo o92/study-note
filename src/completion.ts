@@ -56,7 +56,7 @@ class MdCompletionItemProvider implements CompletionItemProvider {
             return item;
         });
         let envSnippet = new CompletionItem('\\begin', CompletionItemKind.Snippet);
-        envSnippet.insertText = new SnippetString('begin{${1|' + katexFuncs.envs.join(',') + '|}}\n\t$2\n\\end{$1}');
+        envSnippet.insertText = new SnippetString('begin{${1|' + katexFuncs.envs.join(',') + '|}}$2\\end{$1}');
 
         // Pretend to support multi-workspacefolders
         const folder = workspace.workspaceFolders?.[0]?.uri;

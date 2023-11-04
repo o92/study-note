@@ -3,7 +3,7 @@
   "displayName": "study note",
   "publisher": "hyj",
   "description": "For some extensions in vscode notebooks,it is mainly to turn a notebook into a study note, please refer to readme for details.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.83.0"
   },
